@@ -5,7 +5,7 @@ Trace="/bin/traceroute -I"
 Nmap="nmap -p 80,443"
 Num=0
 Fai=0
-for server in `cat ./serverlist.sort`
+for server in `cat ./serverlist.sort | sort --random-sort`
 do
  Num=$(($Num + 1)) # server count
  echo -n "$server "
